@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+@layer components {
+  
+}
+
+@media (min-width: 1512px) {
+  .container {
+    max-width: 1512px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
