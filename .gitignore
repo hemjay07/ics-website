@@ -31,3 +31,13 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+
+# Webpack cache and build files
+.next/cache/
+*.pack.gz
+*.pack.gz.gold
+
+# Hot update files
+*.hot-update.js
+*.hot-update.json
