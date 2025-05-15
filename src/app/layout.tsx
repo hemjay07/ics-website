@@ -1,30 +1,50 @@
 // src/app/layout.tsx
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import localFont from "next/font/local";
+import "./globals.css";
 
-// Font configuration
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-// Metadata
-export const metadata: Metadata = {
-  title: 'ICS - Government Management Systems Integrator',
-  description: 'ICS specializes in delivering complex government management systems with a focus on efficiency and long-term functionality.',
-}
+const helveticaNeue = localFont({
+  src: [
+    {
+      path: "../../public/fonts/HelveticaNeue-Roman.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/HelveticaNeue-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/HelveticaNeue-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/HelveticaNeue-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/HelveticaNeue-Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica-neue",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className} suppressHydrationWarning>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${helveticaNeue.className} ${helveticaNeue.variable}`}
+    >
+      <body className="font-helvetica-neue">{children}</body>
     </html>
-  )
+  );
 }

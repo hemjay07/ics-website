@@ -26,10 +26,10 @@ const Hero = () => {
         mask: "lines",
         onSplit: (self) => {
           tl.from(self.lines, {
-            duration: 1.2,
+            duration: 1,
             yPercent: 100,
-            stagger: 0.2,
-            ease: "expo.out",
+            stagger: 0.3,
+            ease: "power2.out",
           });
         },
       });
@@ -37,14 +37,14 @@ const Hero = () => {
       tl.from(
         ".subtitle",
         {
-          duration: 0.6,
+          duration: 0.2,
           opacity: 0,
           ease: "expo.out",
         },
         "-=0.4"
       ).from("path", {
         opacity: 0,
-        stagger: 0.05,
+        stagger: 0.02,
       });
 
       // // // Split and animate paragraph
@@ -230,7 +230,7 @@ const Hero = () => {
           <div className="">
             {/* Text Content */}
             <div className="text-white space-y-6">
-              <h1 className="title text-4xl max-w-[37rem] md:text-5xl lg:text-[3.44rem] font-bold leading-tight opacity-0">
+              <h1 className="title text-4xl max-w-[37rem] md:text-5xl lg:text-[3.44rem] font-bold leading-[3.8rem] opacity-0">
                 Powering Government Systems with Precision and Speed
               </h1>
 

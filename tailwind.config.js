@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,14 +10,17 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0056b3',
-          dark: '#004390',
-          light: '#1a75d2',
+          DEFAULT: "#0056b3",
+          dark: "#004390",
+          light: "#1a75d2",
         },
-        secondary: '#00a0e9',
-        accent: '#ff6b00',
+        secondary: "#00a0e9",
+        accent: "#ff6b00",
+      },
+      fontFamily: {
+        "helvetica-neue": ["var(--font-helvetica-neue)", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
+};
