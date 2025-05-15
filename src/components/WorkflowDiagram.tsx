@@ -1,8 +1,7 @@
 import WorkflowSVG from "../../public/images/workflow.svg";
 
 // Style and animation for the workflow diagram
-const WorkflowDiagram = ({ className }: any) => {
-
+const WorkflowDiagram = () => {
   // useEffect(() => {
   //   if (!svgRef.current) return
 
