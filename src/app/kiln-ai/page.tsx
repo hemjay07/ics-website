@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Home/Navigation";
 
 export default function KilnAIPage() {
   return (
