@@ -3,7 +3,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText"; // Premium GSAP plugin
-import Link from "next/link";
 import WorkflowDiagram from "../WorkflowDiagram";
 import { MagneticButton, RoundedButton } from "./button";
 // Register the SplitText plugin
