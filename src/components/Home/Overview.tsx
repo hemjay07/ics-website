@@ -110,7 +110,7 @@ const Overview = () => {
       gsap.set(texts, { opacity: 0 });
 
       // Create animation loop for texts
-      texts.forEach((text) => {
+      texts.forEach((text: any) => {
         loopTL
           .to(
             text,

@@ -7,19 +7,17 @@ const LatestCaseStudy = () => {
     const lazyVideos = Array.from(document.querySelectorAll("video.lazy"));
 
     if ("IntersectionObserver" in window) {
-      const lazyVideoObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const video = entry.target as HTMLVideoElement;
-              video.autoplay = true;
-              video.controls = false;
-              video.load();
-              lazyVideoObserver.unobserve(video);
-            }
-          });
-        }
-      );
+      const lazyVideoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const video = entry.target as HTMLVideoElement;
+            video.autoplay = true;
+            video.controls = false;
+            video.load();
+            lazyVideoObserver.unobserve(video);
+          }
+        });
+      });
 
       lazyVideos.forEach((video) => lazyVideoObserver.observe(video));
     }
