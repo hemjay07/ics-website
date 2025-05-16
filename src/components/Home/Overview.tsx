@@ -17,7 +17,7 @@ const Overview = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: OverviewRef.current,
-          start: "top 50%",
+          start: "top 20%",
         },
       });
 

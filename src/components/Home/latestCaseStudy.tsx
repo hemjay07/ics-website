@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { MagneticButton } from "./button";
 
 const LatestCaseStudy = () => {
   useEffect(() => {
@@ -42,7 +43,7 @@ const LatestCaseStudy = () => {
           <div className="mt-[1.44rem] ml-[1.12rem] flex flex-col">
             {" "}
             <div className="self-start mb-[4.31rem]">
-              <span className="inline-block px-[0.77856rem]  py-[0.288rem] rounded-full text-[#2F74E3]  border-[2.6px] border-[#2F74E3] text-[1rem]  font-bold">
+              <span className="inline-block py-[0.77856rem]  px-[2rem] rounded-full text-[#2F74E3]  border-[2.6px] border-[#2F74E3] text-[1rem]  font-bold">
                 Latest Case study
               </span>
             </div>
@@ -58,26 +59,11 @@ const LatestCaseStudy = () => {
               </p>
             </div>
             <div className="mt-[21rem]">
-              <a
+              <MagneticButton
+                text="Read more"
+                color="blue"
                 href="/case-studies/nsw-permit-workflow"
-                className="inline-flex items-center text-[1rem] text-[#0B2E79] font-bold hover:text-blue-700 transition-colors"
-              >
-                Read more
-                <svg
-                  className="w-4 h-4 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5l7 7-7 7"
-                  ></path>
-                </svg>
-              </a>
+              />
             </div>
           </div>
         </div>

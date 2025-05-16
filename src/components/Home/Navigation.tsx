@@ -17,7 +17,7 @@ const Navigation = () => {
   ];
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300  'bg-transparent">
+    <header className="absolute w-full z-50 transition-all duration-300  'bg-transparent">
       <div className="max-w-[1520px] mx-auto px-4 lg:px-[3.81rem]">
         <div className="flex">
           {/* Logo */}
@@ -64,7 +64,7 @@ const Navigation = () => {
                 className={`font-bold text-white transition-colors text-sm ${
                   pathname === link.path
                     ? "border-b-2 border-white"
-                    : "hover:text-white/80"
+                    : "hover:text-white/75 duration-200 ease-out"
                 }`}
               >
                 {link.name}

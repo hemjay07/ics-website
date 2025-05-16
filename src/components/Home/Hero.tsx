@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText"; // Premium GSAP plugin
 import Link from "next/link";
 import WorkflowDiagram from "../WorkflowDiagram";
-
+import { MagneticButton, RoundedButton } from "./button";
 // Register the SplitText plugin
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(useGSAP);
@@ -60,64 +60,6 @@ const Hero = () => {
     },
     { scope: heroRef }
   );
-
-  // useEffect(() => {
-
-  //   // Animation timeline
-
-  //   // Need to keep references to SplitText instances for cleanup
-  //   let headingSplit: SplitText;
-  //   let paragraphSplit: SplitText;
-
-  //   // Wait for fonts to be ready before splitting text
-  //   document.fonts.ready.then(() => {
-  //     // Set initial opacity for text elements to be visible for splitting
-  //     gsap.set([headingRef.current, paragraphRef.current], { opacity: 1 });
-
-  //     // Split and animate heading
-  //     headingSplit = new SplitText(headingRef.current, {
-  //       type: "lines",
-  //       linesClass: "line",
-  //       mask: "lines",
-  //       onSplit: (self) => {
-  //         tl.from(self.lines, {
-  //           duration: 0.8,
-  //           yPercent: 100,
-  //           opacity: 0,
-  //           stagger: 0.2,
-  //           ease: "expo.out",
-  //         });
-  //       },
-  //     });
-
-  //     // Split and animate paragraph
-  //     paragraphSplit = new SplitText(paragraphRef.current, {
-  //       type: "words,lines",
-  //       linesClass: "line",
-  //       mask: "lines",
-  //       onSplit: (self) => {
-  //         tl.from(
-  //           self.lines,
-  //           {
-  //             duration: 0.6,
-  //             yPercent: 100,
-  //             opacity: 0,
-  //             stagger: 0.05,
-  //             ease: "expo.out",
-  //           },
-  //           "-=0.4"
-  //         );
-  //       },
-  //     });
-  //   });
-
-  //   // Clean up
-  //   return () => {
-  //     if (headingSplit) headingSplit.revert();
-  //     if (paragraphSplit) paragraphSplit.revert();
-  //     tl.kill();
-  //   };
-  // }, []);
 
   return (
     <section
@@ -232,22 +174,13 @@ const Hero = () => {
                 agility, and supporting mission-critical operations for decades.
               </p>
 
-              <div className="flex gap-4 pt-4 opacity-0 button">
-                <Link
-                  href="/contact"
-                  className="bg-white text-[#1A2E6E] px-8 py-3 rounded-md transition-colors duration-300 font-medium hover:bg-white/90"
-                >
-                  Partner with Us
-                </Link>
-                <Link
-                  href="/platform"
-                  className="border border-white text-white px-8 py-3 rounded-md transition-colors duration-300 font-medium group hover:bg-white/10"
-                >
-                  Our platform
-                  <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">
-                    →
-                  </span>
-                </Link>
+              <div className="flex gap-7.5 items-center mt-20 opacity-0 button">
+                <RoundedButton />
+                <MagneticButton
+                  href="blank"
+                  color="white"
+                  text="Our platform"
+                />
               </div>
             </div>
           </div>
