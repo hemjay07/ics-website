@@ -43,15 +43,7 @@ const Overview = () => {
         "<"
       ); // run at same time as previous
 
-      tl.from(
-        ".years-div",
-        {
-          y: 40,
-          duration: 2,
-          ease: "power4.out",
-        },
-        "<"
-      ); // run at same time as previous
+      /// run at same time as previous
 
       tl.to(
         ".assets-count-1",
@@ -203,14 +195,20 @@ const Overview = () => {
         <p className="font-bold text-[#173880] text-xl mt-[5.4rem] mb-[4.25rem]">
           Overview
         </p>
-        <h2 className="overview-heading text-[2.19rem] font-bold text-[#173880] max-w-[49.6rem] leading-[2.4rem] -tracking-[0.06563rem]">
+        <h2
+          data-speed={1.1}
+          className="overview-heading text-[2.19rem] font-bold text-[#173880] max-w-[49.6rem] leading-[2.4rem] -tracking-[0.06563rem]"
+        >
           With a legacy of delivering robust platforms across Australia and New
           Zealand, ICS helps public agencies escape the high cost and failure
           rate of custom-built systems.
         </h2>
 
         <div className="relative mt-[9.8rem] mb-[15.5rem] overflow-x-clip">
-          <div className="years-div mb-[4.21rem] border-l-[4.5px] border-l-[#0B2E79] pl-6">
+          <div
+            data-speed={1.1}
+            className="years-div mb-[4.21rem] border-l-[4.5px] border-l-[#0B2E79] pl-6"
+          >
             <h2 className=" text-[2.31rem] text-[#173880] font-medium leading-[1] mb-6">
               <span className="years-count">0</span>+ Years
             </h2>
@@ -219,7 +217,10 @@ const Overview = () => {
             </p>
           </div>
 
-          <div className="years-div mb-[7.02rem] ml-[29.42rem] border-l-[4.5px] border-l-[#0B2E79] pl-6">
+          <div
+            data-speed={1.1}
+            className="years-div mb-[7.02rem] ml-[29.42rem] border-l-[4.5px] border-l-[#0B2E79] pl-6"
+          >
             <h2 className="text-[2.313rem] text-[#173880] font-medium leading-[1] mb-6">
               $<span className="assets-count-1">0</span>M+
             </h2>
@@ -228,7 +229,10 @@ const Overview = () => {
             </p>
           </div>
 
-          <div className="years-div  ml-[7.35rem] border-l-[4.5px] border-l-[#0B2E79] pl-6">
+          <div
+            data-speed={1.2}
+            className="years-div  ml-[7.35rem] border-l-[4.5px] border-l-[#0B2E79] pl-6"
+          >
             <h2 className="text-[2.31rem] text-[#173880] font-medium leading-[1] mb-6">
               $<span className="assets-count-2">0</span>M+
             </h2>

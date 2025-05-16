@@ -1,5 +1,5 @@
 const LocationDiagram = () => (
-  <div className="absolute  mt-25 z-10  -right-20 -top-35 ">
+  <div data-speed={1.1} className="absolute  mt-25 z-10  -right-20 -top-35 ">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={800}

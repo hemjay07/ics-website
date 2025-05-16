@@ -42,8 +42,8 @@ const LatestCaseStudy = () => {
         <div className="relative  p-[1.56rem] z-10 w-[36rem] bg-white h-[50.8rem] rounded-[0.875rem]">
           <div className="mt-[1.44rem] ml-[1.12rem] flex flex-col">
             {" "}
-            <div className="self-start mb-[4.31rem]">
-              <span className="inline-block py-[0.77856rem]  px-[2rem] rounded-full text-[#2F74E3]  border-[2.6px] border-[#2F74E3] text-[1rem]  font-bold">
+            <div className="self-start mb-[4.31rem] group">
+              <span className="inline-block py-[0.77856rem]  px-[2rem] rounded-full text-[#2F74E3]  border-[2.6px] border-[#2F74E3] text-[1rem]  font-bold group-hover:opacity-75 group-hover:cursor-pointer">
                 Latest Case study
               </span>
             </div>
